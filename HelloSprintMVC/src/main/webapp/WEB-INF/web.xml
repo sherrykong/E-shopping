@@ -1,0 +1,34 @@
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns="http://java.sun.com/xml/ns/javaee"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/javaeehttp://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+   id="WebApp_ID" version="3.0">
+    
+   <display-name>HelloWorldSpring</display-name>
+    
+   <servlet>
+       <servlet-name>spring-mvc</servlet-name>
+       <servlet-class>
+           org.springframework.web.servlet.DispatcherServlet
+       </servlet-class>
+       <load-on-startup>1</load-on-startup>
+   </servlet>   
+    
+   <servlet-mapping>
+       <servlet-name>spring-mvc</servlet-name>
+       <url-pattern>/</url-pattern>
+   </servlet-mapping>
+ 
+    <!-- Other XML Configuration -->
+   <!-- Load by Spring ContextLoaderListener -->
+   <context-param>
+       <param-name>contextConfigLocation</param-name>
+       <param-value>/WEB-INF/root-context.xml</param-value>
+   </context-param>
+ 
+    
+    <!-- Spring ContextLoaderListener -->
+   <listener>
+       <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+   </listener>
+    
+</web-app>

@@ -1,0 +1,7 @@
+0:0:0:0:0:0:0:1 - - [23/May/2017:22:19:37 +0800] "GET / HTTP/1.1" 404 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [23/May/2017:22:19:50 +0800] "GET /HelloSprintMVC HTTP/1.1" 302 - http-bio-8080-exec-3 0
+0:0:0:0:0:0:0:1 - - [23/May/2017:22:19:50 +0800] "GET /HelloSprintMVC/ HTTP/1.1" 200 52 http-bio-8080-exec-5 57
+0:0:0:0:0:0:0:1 - - [23/May/2017:22:19:50 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-6 0
+0:0:0:0:0:0:0:1 - - [23/May/2017:22:19:55 +0800] "GET /HelloSprintMVC/hello HTTP/1.1" 200 285 http-bio-8080-exec-7 87
+0:0:0:0:0:0:0:1 - - [23/May/2017:22:20:17 +0800] "GET /HelloSprintMVC/hello HTTP/1.1" 200 285 http-bio-8080-exec-10 3
+0:0:0:0:0:0:0:1 - - [23/May/2017:22:33:14 +0800] "GET /HelloSprintMVC/hello HTTP/1.1" 200 330 http-bio-8080-exec-1 1065
