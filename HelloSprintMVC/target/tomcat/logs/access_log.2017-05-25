@@ -28,3 +28,8 @@
 0:0:0:0:0:0:0:1 - - [25/May/2017:11:07:11 +0800] "GET /HelloSprintMVC/login HTTP/1.1" 200 598 http-bio-8080-exec-2 15
 0:0:0:0:0:0:0:1 - - [25/May/2017:11:07:21 +0800] "POST /HelloSprintMVC/userlogin HTTP/1.1" 500 6016 http-bio-8080-exec-3 11
 0:0:0:0:0:0:0:1 - - [25/May/2017:11:13:26 +0800] "POST /HelloSprintMVC/userlogin HTTP/1.1" 500 6016 http-bio-8080-exec-1 1071
+0:0:0:0:0:0:0:1 - - [25/May/2017:11:22:52 +0800] "GET /HelloSprintMVC/userlogin HTTP/1.1" 405 1045 http-bio-8080-exec-1 80
+0:0:0:0:0:0:0:1 - - [25/May/2017:11:22:58 +0800] "GET /HelloSprintMVC/login HTTP/1.1" 200 598 http-bio-8080-exec-5 97
+0:0:0:0:0:0:0:1 - - [25/May/2017:11:23:03 +0800] "POST /HelloSprintMVC/userlogin HTTP/1.1" 500 5809 http-bio-8080-exec-6 26
+0:0:0:0:0:0:0:1 - - [25/May/2017:11:26:04 +0800] "GET /HelloSprintMVC/login HTTP/1.1" 200 598 http-bio-8080-exec-1 149
+0:0:0:0:0:0:0:1 - - [25/May/2017:11:26:08 +0800] "POST /HelloSprintMVC/userlogin HTTP/1.1" 200 1059 http-bio-8080-exec-3 21

@@ -22,7 +22,6 @@ public class HelloWorldController {
 	public ModelAndView login() {
 		return new ModelAndView("login", "command", new User());
 	}
-	
 
 	@RequestMapping("/process")
 	public String process(Model model) {
@@ -36,39 +35,34 @@ public class HelloWorldController {
 
 	@RequestMapping(value = "/addStudent", method = RequestMethod.POST)
 	public String addStudent(@ModelAttribute("SpringWeb") Student student, ModelMap model) {
-		
-		
+
 		model.addAttribute("name", student.getName());
 		model.addAttribute("age", student.getAge());
 		model.addAttribute("id", student.getId());
 
 		return "result";
 	}
-	
-	
-	@RequestMapping(value = "/userlogin", method = RequestMethod.POST)
-	public String userlogin(@ModelAttribute("SpringWeb") User user, ModelMap model) {
-		if(user.getName().equals("seller")&&user.getPassword().equals("relles")){
-			return "seller";
-			
-		}
-		if(user.getName().equals("buyer")&&user.getPassword().equals("revub")){
-			return "buyer";
-			
-		}
 
-		return "404";
+	@RequestMapping(value = "/userlogin", method = RequestMethod.POST)
+	public ModelAndView userlogin(@ModelAttribute("SpringWeb") User user, ModelMap model) {
+		if (user.getName().equals("seller") && user.getPassword().equals("relles")) {
+			return new ModelAndView("seller", "command", new SellerPublish());
+		}
+		if (user.getName().equals("buyer") && user.getPassword().equals("revub")) {
+			return null;
+		}
+		return null;
 	}
-	//新增代码
+
+	// 新增代码
 	@RequestMapping(value = "/SellerPublish", method = RequestMethod.GET)
 	public ModelAndView SellerPublish() {
 		return new ModelAndView("SellerPublish", "command", new SellerPublish());
 	}
 
 	@RequestMapping(value = "/addSellerPublish", method = RequestMethod.POST)
-	public String addSellerPublish(@ModelAttribute("SpringWeb")SellerPublish SellerPublish, ModelMap model) {
-		
-		
+	public String addSellerPublish(@ModelAttribute("SpringWeb") SellerPublish SellerPublish, ModelMap model) {
+
 		model.addAttribute("title", SellerPublish.getTitle());
 		model.addAttribute("summary", SellerPublish.getSummary());
 		model.addAttribute("picture", SellerPublish.getPicture());
@@ -78,11 +72,4 @@ public class HelloWorldController {
 		return "result";
 	}
 
-	
-	
-	
-	
-	
-	
-	
 }
