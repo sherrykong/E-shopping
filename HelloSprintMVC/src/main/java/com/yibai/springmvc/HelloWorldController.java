@@ -59,7 +59,7 @@ public class HelloWorldController {
 
 		return "404";
 	}
-	
+	//新增代码
 	@RequestMapping(value = "/SellerPublish", method = RequestMethod.GET)
 	public ModelAndView SellerPublish() {
 		return new ModelAndView("SellerPublish", "command", new SellerPublish());
@@ -77,6 +77,7 @@ public class HelloWorldController {
 
 		return "result";
 	}
+
 	
 	
 	

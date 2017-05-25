@@ -1,7 +1,7 @@
 package com.yibai.springmvc;
 
 import java.awt.Image;
-
+//新增代码
 public class SellerPublish {
 private String title;
 private String summary;

@@ -5,7 +5,7 @@
     <title>Spring MVC表单处理</title>
 </head>
 <body>
-
+//修改过的代码
 <h2>提交的内容发布如下 - </h2>
    <table>
     <tr>

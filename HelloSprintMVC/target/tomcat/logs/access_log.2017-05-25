@@ -15,3 +15,16 @@
 0:0:0:0:0:0:0:1 - - [25/May/2017:09:32:31 +0800] "GET /css/style.css HTTP/1.1" 404 - http-bio-8080-exec-2 0
 0:0:0:0:0:0:0:1 - - [25/May/2017:09:32:31 +0800] "GET /js/global.js HTTP/1.1" 404 - http-bio-8080-exec-5 0
 0:0:0:0:0:0:0:1 - - [25/May/2017:09:32:31 +0800] "GET /js/public.js HTTP/1.1" 404 - http-bio-8080-exec-4 0
+0:0:0:0:0:0:0:1 - - [25/May/2017:10:09:51 +0800] "GET /HelloSprintMVC/SellerPublish HTTP/1.1" 200 3110 http-bio-8080-exec-1 866
+0:0:0:0:0:0:0:1 - - [25/May/2017:10:09:51 +0800] "GET /css/style.css HTTP/1.1" 404 - http-bio-8080-exec-2 0
+0:0:0:0:0:0:0:1 - - [25/May/2017:10:09:51 +0800] "GET /js/global.js HTTP/1.1" 404 - http-bio-8080-exec-4 0
+0:0:0:0:0:0:0:1 - - [25/May/2017:10:09:51 +0800] "GET /js/public.js HTTP/1.1" 404 - http-bio-8080-exec-5 0
+0:0:0:0:0:0:0:1 - - [25/May/2017:10:11:43 +0800] "GET /HelloSprintMVC/addStudent HTTP/1.1" 405 1045 http-bio-8080-exec-8 4
+0:0:0:0:0:0:0:1 - - [25/May/2017:10:11:49 +0800] "GET /HelloSprintMVC/addSellerPublish HTTP/1.1" 405 1045 http-bio-8080-exec-10 2
+0:0:0:0:0:0:0:1 - - [25/May/2017:11:05:39 +0800] "GET /HelloSprintMVC/login HTTP/1.1" 200 598 http-bio-8080-exec-1 123
+0:0:0:0:0:0:0:1 - - [25/May/2017:11:05:39 +0800] "GET /HelloSprintMVC/login HTTP/1.1" 200 598 http-bio-8080-exec-3 3
+0:0:0:0:0:0:0:1 - - [25/May/2017:11:05:55 +0800] "POST /HelloSprintMVC/userlogin HTTP/1.1" 500 6010 http-bio-8080-exec-4 935
+0:0:0:0:0:0:0:1 - - [25/May/2017:11:07:04 +0800] "POST /HelloSprintMVC/userlogin HTTP/1.1" 500 6016 http-bio-8080-exec-1 1063
+0:0:0:0:0:0:0:1 - - [25/May/2017:11:07:11 +0800] "GET /HelloSprintMVC/login HTTP/1.1" 200 598 http-bio-8080-exec-2 15
+0:0:0:0:0:0:0:1 - - [25/May/2017:11:07:21 +0800] "POST /HelloSprintMVC/userlogin HTTP/1.1" 500 6016 http-bio-8080-exec-3 11
+0:0:0:0:0:0:0:1 - - [25/May/2017:11:13:26 +0800] "POST /HelloSprintMVC/userlogin HTTP/1.1" 500 6016 http-bio-8080-exec-1 1071
