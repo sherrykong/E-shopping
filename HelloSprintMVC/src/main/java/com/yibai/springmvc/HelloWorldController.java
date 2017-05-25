@@ -45,29 +45,32 @@ public class HelloWorldController {
 
 	@RequestMapping(value = "/userlogin", method = RequestMethod.POST)
 	public ModelAndView userlogin(@ModelAttribute("SpringWeb") User user, ModelMap model) {
+
 		if (user.getName().equals("seller") && user.getPassword().equals("relles")) {
-			return new ModelAndView("seller", "command", new SellerPublish());
+			return new ModelAndView("seller", "command", new Goods());
+
 		}
 		if (user.getName().equals("buyer") && user.getPassword().equals("revub")) {
-			return null;
+			return new ModelAndView("buyer");
+
 		}
-		return null;
+		return new ModelAndView("404");
 	}
 
 	// 新增代码
 	@RequestMapping(value = "/SellerPublish", method = RequestMethod.GET)
 	public ModelAndView SellerPublish() {
-		return new ModelAndView("SellerPublish", "command", new SellerPublish());
+		return new ModelAndView("SellerPublish", "command", new Goods());
 	}
 
-	@RequestMapping(value = "/addSellerPublish", method = RequestMethod.POST)
-	public String addSellerPublish(@ModelAttribute("SpringWeb") SellerPublish SellerPublish, ModelMap model) {
-
-		model.addAttribute("title", SellerPublish.getTitle());
-		model.addAttribute("summary", SellerPublish.getSummary());
-		model.addAttribute("picture", SellerPublish.getPicture());
-		model.addAttribute("context", SellerPublish.getContext());
-		model.addAttribute("price", SellerPublish.getPrice());
+	@RequestMapping(value = "/addGoods", method = RequestMethod.POST)
+	public String addSellerPublish(@ModelAttribute("SpringWeb") Goods goods, ModelMap model) {
+		System.out.print(goods.toString());
+		model.addAttribute("title", goods.getTitle());
+		model.addAttribute("summary", goods.getSummary());
+		model.addAttribute("picture", goods.getPicture());
+		model.addAttribute("context", goods.getContext());
+		model.addAttribute("price", goods.getPrice());
 
 		return "result";
 	}
