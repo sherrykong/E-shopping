@@ -47,17 +47,17 @@ public class HelloWorldController {
 	
 	
 	@RequestMapping(value = "/userlogin", method = RequestMethod.POST)
-	public String userlogin(@ModelAttribute("SpringWeb") User user, ModelMap model) {
+	public ModelAndView userlogin(@ModelAttribute("SpringWeb") User user, ModelMap model) {
 		if(user.getName().equals("seller")&&user.getPassword().equals("relles")){
-			return "seller";
+			return new ModelAndView("seller","command",new SellerPublish());
 			
 		}
 		if(user.getName().equals("buyer")&&user.getPassword().equals("revub")){
-			return "buyer";
+			return new ModelAndView("buyer");
 			
 		}
 
-		return "404";
+		return new ModelAndView("404");
 	}
 	//新增代码
 	@RequestMapping(value = "/SellerPublish", method = RequestMethod.GET)

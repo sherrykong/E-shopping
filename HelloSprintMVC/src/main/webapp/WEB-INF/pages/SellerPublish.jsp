@@ -31,7 +31,7 @@
     </tr>
     <tr>
         <td colspan="2">
-            <input type="submit" value="提交表单"/>
+            <input type="submit" value="发布"/>
         </td>
     </tr>
 </table>  
