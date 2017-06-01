@@ -1,0 +1,10 @@
+0:0:0:0:0:0:0:1 - - [28/May/2017:12:27:25 +0800] "GET /HelloSprintMVC/login HTTP/1.1" 200 598 http-bio-8080-exec-1 132
+0:0:0:0:0:0:0:1 - - [28/May/2017:12:27:25 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-3 0
+0:0:0:0:0:0:0:1 - - [28/May/2017:12:27:31 +0800] "POST /HelloSprintMVC/userlogin HTTP/1.1" 200 1053 http-bio-8080-exec-4 17
+0:0:0:0:0:0:0:1 - - [28/May/2017:12:27:52 +0800] "POST /HelloSprintMVC/addSellerPublish HTTP/1.1" 200 515 http-bio-8080-exec-7 40
+0:0:0:0:0:0:0:1 - - [28/May/2017:12:34:45 +0800] "POST /HelloSprintMVC/userlogin HTTP/1.1" 200 1053 http-bio-8080-exec-1 144
+0:0:0:0:0:0:0:1 - - [28/May/2017:12:34:50 +0800] "POST /HelloSprintMVC/addSellerPublish HTTP/1.1" 200 506 http-bio-8080-exec-2 38
+0:0:0:0:0:0:0:1 - - [28/May/2017:12:37:24 +0800] "POST /HelloSprintMVC/addSellerPublish HTTP/1.1" 200 506 http-bio-8080-exec-1 741
+0:0:0:0:0:0:0:1 - - [28/May/2017:12:39:23 +0800] "POST /HelloSprintMVC/addSellerPublish HTTP/1.1" 200 506 http-bio-8080-exec-1 1026
+0:0:0:0:0:0:0:1 - - [28/May/2017:12:40:08 +0800] "POST /HelloSprintMVC/addSellerPublish HTTP/1.1" 200 506 http-bio-8080-exec-1 581
+0:0:0:0:0:0:0:1 - - [28/May/2017:12:40:35 +0800] "POST /HelloSprintMVC/addSellerPublish HTTP/1.1" 200 509 http-bio-8080-exec-2 16
