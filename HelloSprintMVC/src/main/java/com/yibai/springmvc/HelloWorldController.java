@@ -50,6 +50,7 @@ public class HelloWorldController {
 	}
 
 	@RequestMapping(value = "/userlogin", method = RequestMethod.POST)
+<<<<<<< HEAD
 	public ModelAndView userlogin(@ModelAttribute("SpringWeb") OldUser user, ModelMap model) {
 		if (user.getName().equals("seller") && user.getPassword().equals("123")) {
 			return new ModelAndView("seller", "command", new Goods());
@@ -93,7 +94,18 @@ public class HelloWorldController {
 
 			return new ModelAndView("buyer");
 		}
+=======
+	public ModelAndView userlogin(@ModelAttribute("SpringWeb") User user, ModelMap model) {
 
+		if (user.getName().equals("seller") && user.getPassword().equals("relles")) {
+			return new ModelAndView("seller", "command", new Goods());
+
+		}
+		if (user.getName().equals("buyer") && user.getPassword().equals("revub")) {
+			return new ModelAndView("buyer");
+>>>>>>> ca6f13e79044527197015c4ae94b63811ce12f58
+
+		}
 		return new ModelAndView("404");
 	}
 
@@ -103,8 +115,14 @@ public class HelloWorldController {
 		return new ModelAndView("SellerPublish", "command", new Goods());
 	}
 
+<<<<<<< HEAD
 	@RequestMapping(value = "/addSellerPublish", method = RequestMethod.POST)
 	public String addSellerPublish(@ModelAttribute("SpringWeb") Goods goods, ModelMap model) {
+=======
+	@RequestMapping(value = "/addGoods", method = RequestMethod.POST)
+	public String addSellerPublish(@ModelAttribute("SpringWeb") Goods goods, ModelMap model) {
+		System.out.print(goods.toString());
+>>>>>>> ca6f13e79044527197015c4ae94b63811ce12f58
 		model.addAttribute("title", goods.getTitle());
 		model.addAttribute("summary", goods.getSummary());
 		model.addAttribute("picture", goods.getPicture());
@@ -135,6 +153,7 @@ public class HelloWorldController {
 		return new ModelAndView("register", "command", new OldUser());
 	}
 
+<<<<<<< HEAD
 	@RequestMapping(value = "/userRegister", method = RequestMethod.POST)
 	public ModelAndView userRegister(@ModelAttribute("SpringWeb") OldUser user, ModelMap model) {
 		String s1=user.getName();
@@ -171,4 +190,6 @@ public class HelloWorldController {
 		
 		
 	}
+=======
+>>>>>>> ca6f13e79044527197015c4ae94b63811ce12f58
 }
