@@ -14,6 +14,13 @@
 		ArrayList<Goods> goodsLst = (ArrayList<Goods>) request.getAttribute("data");
 		for (Goods goods : goodsLst) {
 			out.println("<tr><td>" + goods.toString() + "</td></tr>");
+			int goodsId = 123;
+			out.println("<button onCLick=\"location.href='/HelloSprintMVC/addCart?goodsId="+
+			goods.getGoodsId()  +
+			"'\">加入购物车</button>");
+			/* out.println("<button type="+
+			
+			+">添加</button>"); */
 		}
 	%>
 	</table>

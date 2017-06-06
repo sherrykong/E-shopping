@@ -17,6 +17,10 @@
         <td><form:label path="password">密码：</form:label></td>
         <td><form:input path="password" /></td>
     </tr>
+    <tr>
+        <td><form:label path="usertype">用户类型：</form:label></td>
+        <td><form:input path="usertype" /></td>
+    </tr>
    
     <tr>
         <td colspan="2">

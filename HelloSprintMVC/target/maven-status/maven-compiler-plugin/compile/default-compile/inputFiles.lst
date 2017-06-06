@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-/Users/huanjunkong/GitProjects/E-shopping/HelloSprintMVC/src/main/java/com/yibai/springmvc/HelloWorldController.java
-/Users/huanjunkong/GitProjects/E-shopping/HelloSprintMVC/src/main/java/com/yibai/springmvc/SellerPublish.java
-/Users/huanjunkong/GitProjects/E-shopping/HelloSprintMVC/src/main/java/com/yibai/springmvc/User.java
-/Users/huanjunkong/GitProjects/E-shopping/HelloSprintMVC/src/main/java/com/yibai/springmvc/Student.java
-=======
 /Users/konghuanjun/Documents/workspace-neon/HelloSprintMVC/src/main/java/com/yibai/springmvc/User.java
 /Users/konghuanjun/Documents/workspace-neon/HelloSprintMVC/src/main/java/com/yibai/springmvc/Goods.java
 /Users/konghuanjun/Documents/workspace-neon/HelloSprintMVC/src/main/java/com/yibai/springmvc/Student.java
@@ -12,8 +6,4 @@
 /Users/konghuanjun/Documents/workspace-neon/HelloSprintMVC/src/main/java/com/hu/demo/DBHelper.java
 /Users/konghuanjun/Documents/workspace-neon/HelloSprintMVC/src/main/java/com/yibai/springmvc/UserController.java
 /Users/konghuanjun/Documents/workspace-neon/HelloSprintMVC/src/main/java/com/yibai/springmvc/HelloWorldController.java
-<<<<<<< HEAD
 /Users/konghuanjun/Documents/workspace-neon/HelloSprintMVC/src/main/java/com/yibai/springmvc/OldUser.java
-=======
->>>>>>> aed6834b746ad021ff1041ec27367d86a6cdaa7e
->>>>>>> ca6f13e79044527197015c4ae94b63811ce12f58

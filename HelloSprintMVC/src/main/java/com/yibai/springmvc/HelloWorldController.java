@@ -50,13 +50,21 @@ public class HelloWorldController {
 	}
 
 	@RequestMapping(value = "/userlogin", method = RequestMethod.POST)
-<<<<<<< HEAD
 	public ModelAndView userlogin(@ModelAttribute("SpringWeb") OldUser user, ModelMap model) {
-		if (user.getName().equals("seller") && user.getPassword().equals("123")) {
+		String sql3="select * from userlist";
+		if(sql3.equals(null)){
+			return new ModelAndView("register");
+			//如果数据库中没有这个信息则返回注册页面
+		}
+		//如果有，则登录
+		else{
+		
+		
+		if (user.getUsertype().equals("seller") ) {
 			return new ModelAndView("seller", "command", new Goods());
 
 		}
-		if (user.getName().equals("buyer") && user.getPassword().equals("123")) {
+		if (user.getUsertype().equals("buyer")) {
 			String sql = null;
 			DBHelper db1 = null;
 			ResultSet ret = null;
@@ -74,16 +82,16 @@ public class HelloWorldController {
 					String picture = ret.getString(3);
 					String context = ret.getString(4);
 					Integer price = ret.getInt(5);
-					
+
 					Goods goods = new Goods();
 					goods.setTitle(title);
 					goods.setSummary(summary);
 					goods.setPicture(picture);
 					goods.setContext(context);
 					goods.setPrice(price);
-					
+
 					dataList.add(goods);
-					
+
 				} // 显示数据
 				ret.close();
 				db1.close();// 关闭连接
@@ -94,35 +102,18 @@ public class HelloWorldController {
 
 			return new ModelAndView("buyer");
 		}
-=======
-	public ModelAndView userlogin(@ModelAttribute("SpringWeb") User user, ModelMap model) {
 
-		if (user.getName().equals("seller") && user.getPassword().equals("relles")) {
-			return new ModelAndView("seller", "command", new Goods());
-
-		}
-		if (user.getName().equals("buyer") && user.getPassword().equals("revub")) {
-			return new ModelAndView("buyer");
->>>>>>> ca6f13e79044527197015c4ae94b63811ce12f58
-
-		}
 		return new ModelAndView("404");
 	}
-
+	}
 	// 新增代码
 	@RequestMapping(value = "/SellerPublish", method = RequestMethod.GET)
 	public ModelAndView SellerPublish() {
 		return new ModelAndView("SellerPublish", "command", new Goods());
 	}
 
-<<<<<<< HEAD
 	@RequestMapping(value = "/addSellerPublish", method = RequestMethod.POST)
 	public String addSellerPublish(@ModelAttribute("SpringWeb") Goods goods, ModelMap model) {
-=======
-	@RequestMapping(value = "/addGoods", method = RequestMethod.POST)
-	public String addSellerPublish(@ModelAttribute("SpringWeb") Goods goods, ModelMap model) {
-		System.out.print(goods.toString());
->>>>>>> ca6f13e79044527197015c4ae94b63811ce12f58
 		model.addAttribute("title", goods.getTitle());
 		model.addAttribute("summary", goods.getSummary());
 		model.addAttribute("picture", goods.getPicture());
@@ -130,12 +121,9 @@ public class HelloWorldController {
 		model.addAttribute("price", goods.getPrice());
 
 		// insert into goodslist(title, sumXXX) values ()插入数据库
-		String sqlStr = "insert into goodslist(title,summary,picture,context,price) values('" + goods.getTitle() + "', "   +
-		 "'" + goods.getSummary() + "'," +
-		 "'" + goods.getPicture() + "'," +
-		 "'" + goods.getContext() + "'," +
-		 + goods.getPrice() + ")" ;
-		 
+		String sqlStr = "insert into goodslist(title,summary,picture,context,price) values('" + goods.getTitle() + "', "
+				+ "'" + goods.getSummary() + "'," + "'" + goods.getPicture() + "'," + "'" + goods.getContext() + "',"
+				+ +goods.getPrice() + ")";
 
 		DBHelper dbHelper = new DBHelper(sqlStr);
 		try {
@@ -147,49 +135,46 @@ public class HelloWorldController {
 		// goodsList.add(goods);
 		return "result";
 	}
-//用户注册
+
+	// 用户注册
 	@RequestMapping(value = "/register", method = RequestMethod.GET)
 	public ModelAndView register() {
 		return new ModelAndView("register", "command", new OldUser());
 	}
 
-<<<<<<< HEAD
 	@RequestMapping(value = "/userRegister", method = RequestMethod.POST)
 	public ModelAndView userRegister(@ModelAttribute("SpringWeb") OldUser user, ModelMap model) {
-		String s1=user.getName();
-		String s2=user.getPassword();
-		String s3=user.getUsertype();
-		String sql="select*from userlist where name='"+s1+"' and password='"+s2+"'and usertype='"+s3+"' ";
-		
+		String s1 = user.getName();
+		String s2 = user.getPassword();
+		String s3 = user.getUsertype();
+		String sql = "select*from userlist where name='" + s1 + "' and password='" + s2 + "'and usertype='" + s3 + "' ";
+
 		DBHelper db2 = null;
 		ResultSet ret1 = null;
 
-		db2= new DBHelper(sql);// 创建DBHelper对象
+		db2 = new DBHelper(sql);// 创建DBHelper对象
 
-		boolean result=false;
+		boolean result = false;
 		try {
 			ret1 = db2.pst.executeQuery();// 执行语句，得到结果集
-			
-			if(ret1.next()){
+
+			if (ret1.next()) {
 				// 有结果
-				result=true;
+				result = true;
 			}
-			
+
 			ret1.close();
 			db2.close();// 关闭连接
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		if(result==true){
+		if (result == true) {
 			return new ModelAndView("login", "command", new OldUser());
 		}
-		if(result==false){
-			String sql2="insert into userlist values()";//把账号和密码，用户类型加入数据库
+		if (result == false) {
+			return new ModelAndView("login", "command", new OldUser());
 		}
 		return null;
-		
-		
+
 	}
-=======
->>>>>>> ca6f13e79044527197015c4ae94b63811ce12f58
 }
